@@ -2,7 +2,7 @@ body {
 	background: #229cba;
 	text-align:center;
 	color: #FFF;
-	font-family:Verdana, Geneva, sans-serif;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serifl
 }
 #fancyClock {
 	margin-top: 26px;
@@ -124,7 +124,6 @@ border-radius: 120px;*/
 	-webkit-border-radius: 120px;
 	-moz-border-radius: 120px;
 	border-radius: 120px;
-	margin: auto;
-	
+	margin: 40px auto;
 	z-index: -200;
 }
