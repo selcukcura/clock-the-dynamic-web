@@ -32,7 +32,7 @@ border-radius: 120px;*/
 .clock .bg, .clock .front {
 	width: 100px;
 	height: 200px;
-	background-color: #229cba;
+	background-color: #000;
 	position: absolute;
 	top: 0;
 }
@@ -84,8 +84,21 @@ border-radius: 120px;*/
 }
 
 .seconds {
-	border: solid #1a788f 10px;
 	border-radius : 120px;
+	float: right;
+	margin: auto;
+	z-index: -100;
+	margin-top: -190px;
+	margin-right: 100px;
+}
+
+.hours {
+	border-radius : 120px;
+	margin-left:210px;
+	margin-top:10px;
+	width: 180px;
+	height: 180px;
+	position:auto;
 }
 #container {
 	width: 800px;
@@ -93,13 +106,16 @@ border-radius: 120px;*/
 }
 /*seconds counter*/
 #circle {
-	background-color: #334;
+	background-color: #1a788f;
 	height: 200px;
 	width: 200px;
 	-webkit-border-radius: 120px;
 	-moz-border-radius: 120px;
 	border-radius: 120px;
 	margin: auto;
-	margin-left: 229px;
-	margin-top: -329px;
-	position: absolute;}
+	margin-left: 335px;
+	margin-top: -365px;
+	position: absolute;
+	z-index: -200;
+	
+}
