@@ -1,0 +1,90 @@
+body {
+	/* Setting default text color, background and a font stack */
+	color: #dddddd;
+	font-size: 13px;
+	background: #229cba;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#fancyClock {
+	margin: 150px auto;
+	height: 200px;
+	width: 700px;
+}
+.clock {
+	/* The .clock div. Created dynamically by jQuery */
+	background-color: #229cba;
+	height: 200px;
+	width: 200px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	
+	
+	
+	-webkit-border-radius: 120px;
+-moz-border-radius: 120px;
+border-radius: 120px;
+}
+.clock .rotate {
+	/* There are two .rotate divs - one for each half of the background */
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 0;
+	left: 0;
+}
+.rotate.right {
+	display: none;
+	z-index: 11;
+}
+.clock .bg, .clock .front {
+	width: 100px;
+	height: 200px;
+	background-color: #229cba;
+	position: absolute;
+	top: 0;
+}
+.clock .display {
+	/* Holds the number of seconds, minutes or hours respectfully */
+	position: absolute;
+	width: 200px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	z-index: 20;
+	color: #000;
+	font-size: 16px;
+	text-align: center;
+	top: 90px;
+	left: 0;
+}
+/* The left part of the background: */
+
+.clock .bg.left {
+	left: 0;
+}
+/* Individual styles for each color: */
+.hours .bg.left {
+	background: url(../img/hours.png) no-repeat left top;
+}
+.minutes .bg.left {
+	background: url(../img/minutes.png) no-repeat left top;
+}
+.seconds .bg.left {
+	background: url(../img/seconds.png) no-repeat left top;
+}
+/* The right part of the background: */
+.clock .bg.right {
+	left: 100px;
+}
+.hours .bg.right {
+	background: url(../img/hours.png) no-repeat right top;
+}
+.minutes .bg.right {
+	background: url(../img/minutes.png) no-repeat right top;
+}
+.seconds .bg.right {
+	background: url(../img/seconds.png) no-repeat right top;
+}
+.clock .front.left {
+	left: 0;
+	z-index: 10;
+}
