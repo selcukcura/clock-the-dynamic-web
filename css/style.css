@@ -32,10 +32,11 @@ border-radius: 120px;*/
 .clock .bg, .clock .front {
 	width: 100px;
 	height: 200px;
-	background-color: #000;
+	background-color: #229cba;
 	position: absolute;
 	top: 0;
 }
+
 .clock .display {
 	/* Holds the number of seconds, minutes or hours respectfully */
 	color: #000;	
@@ -100,6 +101,14 @@ border-radius: 120px;*/
 	height: 180px;
 	position:auto;
 }
+.hours .display { /*hides clock number counter*/
+	display: none;
+}
+
+.hours .front {
+	background-color:#ecff4f; /*masks only hours background*/
+}
+
 #container {
 	width: 800px;
 	margin: auto;
@@ -113,9 +122,8 @@ border-radius: 120px;*/
 	-moz-border-radius: 120px;
 	border-radius: 120px;
 	margin: auto;
-	margin-left: 335px;
-	margin-top: -365px;
+	margin-left: 332px;
+	margin-top: -366px;
 	position: absolute;
 	z-index: -200;
-	
 }
