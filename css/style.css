@@ -21,9 +21,9 @@ body {
 	
 	
 	
-	-webkit-border-radius: 120px;
+	/*-webkit-border-radius: 120px;
 -moz-border-radius: 120px;
-border-radius: 120px;
+border-radius: 120px;*/
 }
 .clock .rotate {
 	/* There are two .rotate divs - one for each half of the background */
@@ -87,4 +87,23 @@ border-radius: 120px;
 .clock .front.left {
 	left: 0;
 	z-index: 10;
+}
+
+.minutes {: 230px;}
+
+
+#container {
+	width: 800px;
+	margin: auto;
+	}
+
+/*seconds counter*/
+#circle {
+    background-color: #334;
+    height: 200px;
+    width: 200px;
+    -webkit-border-radius: 120px;
+    -moz-border-radius: 120px;
+    border-radius: 120px;
+	margin-top: -400px;
 }

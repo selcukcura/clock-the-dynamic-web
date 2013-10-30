@@ -8,7 +8,26 @@
 <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
+
+<div id="container">
 <div id="fancyClock"></div>
 
+<div id="circle"></div>
+</div>
+<script>
+$(document).ready(function () {
+    function animateCircle() {
+        $('#circle').animate({
+            height: 240,
+            width: 240
+        }, 500) //half a second bounce out
+            .animate({
+            height: 200,
+            width: 200
+        }, 500, animateCircle); //half a second bounce in
+    }
+    animateCircle(); //loops the function set above
+});
+</script>
 </body>
 </html>
