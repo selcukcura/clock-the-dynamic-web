@@ -1,14 +1,10 @@
 body {
-	/* Setting default text color, background and a font stack */
-	color: #dddddd;
-	font-size: 13px;
 	background: #229cba;
-	font-family: Arial, Helvetica, sans-serif;
 }
 #fancyClock {
 	margin: 150px auto;
 	height: 200px;
-	width: 700px;
+	width: 500px;
 }
 .clock {
 	/* The .clock div. Created dynamically by jQuery */
@@ -17,11 +13,7 @@ body {
 	width: 200px;
 	position: relative;
 	overflow: hidden;
-	float: left;
-	
-	
-	
-	/*-webkit-border-radius: 120px;
+	float: left;/*-webkit-border-radius: 120px;
 -moz-border-radius: 120px;
 border-radius: 120px;*/
 }
@@ -46,12 +38,11 @@ border-radius: 120px;*/
 }
 .clock .display {
 	/* Holds the number of seconds, minutes or hours respectfully */
+	color: #000;	
+	font-size: 20px;
 	position: absolute;
 	width: 200px;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	z-index: 20;
-	color: #000;
-	font-size: 16px;
 	text-align: center;
 	top: 90px;
 	left: 0;
@@ -88,22 +79,27 @@ border-radius: 120px;*/
 	left: 0;
 	z-index: 10;
 }
+.minutes {  /*actually seconds*/
+	display: none;
+}
 
-.minutes {: 230px;}
-
-
+.seconds {
+	border: solid #1a788f 10px;
+	border-radius : 120px;
+}
 #container {
 	width: 800px;
 	margin: auto;
-	}
-
+}
 /*seconds counter*/
 #circle {
-    background-color: #334;
-    height: 200px;
-    width: 200px;
-    -webkit-border-radius: 120px;
-    -moz-border-radius: 120px;
-    border-radius: 120px;
-	margin-top: -400px;
-}
+	background-color: #334;
+	height: 200px;
+	width: 200px;
+	-webkit-border-radius: 120px;
+	-moz-border-radius: 120px;
+	border-radius: 120px;
+	margin: auto;
+	margin-left: 229px;
+	margin-top: -329px;
+	position: absolute;}
