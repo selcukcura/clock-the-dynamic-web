@@ -17,9 +17,7 @@ body {
 	width: 200px;
 	position: relative;
 	overflow: hidden;
-	float: left;/*-webkit-border-radius: 120px;
--moz-border-radius: 120px;
-border-radius: 120px;*/
+	float: left;
 }
 .clock .rotate {
 	/* There are two .rotate divs - one for each half of the background */
@@ -27,7 +25,7 @@ border-radius: 120px;*/
 	width: 200px;
 	height: 200px;
 	top: 0;
-	left: 0;
+
 }
 .rotate.right {
 	display: none;
@@ -70,10 +68,11 @@ border-radius: 120px;*/
 }
 /* The right part of the background: */
 .clock .bg.right {
-	left: 80px;
+	left: 100px;
 }
 .hours .bg.right {
 	background: url(../img/hours.png) no-repeat right top;
+	left: 120px; /*remove to make center point higher but mess up on left*/
 }
 .minutes .bg.right {
 	background: url(../img/minutes.png) no-repeat right top;
@@ -82,7 +81,6 @@ border-radius: 120px;*/
 	background: url(../img/seconds.png) no-repeat right top;
 }
 .clock .front.left {
-
 	z-index: 10;
 }
 .minutes {  /*actually seconds*/
@@ -127,3 +125,5 @@ border-radius: 120px;*/
 	margin: 40px auto;
 	z-index: -200;
 }
+
+
