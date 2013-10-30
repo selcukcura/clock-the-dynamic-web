@@ -1,8 +1,12 @@
 body {
 	background: #229cba;
+	text-align:center;
+	color: #FFF;
+	font-family:Verdana, Geneva, sans-serif;
 }
 #fancyClock {
-	margin: 150px auto;
+	margin-top: 26px;
+	margin-left: -170px;
 	height: 200px;
 	width: 500px;
 }
@@ -56,6 +60,7 @@ border-radius: 120px;*/
 /* Individual styles for each color: */
 .hours .bg.left {
 	background: url(../img/hours.png) no-repeat left top;
+	left: 20px;
 }
 .minutes .bg.left {
 	background: url(../img/minutes.png) no-repeat left top;
@@ -65,7 +70,7 @@ border-radius: 120px;*/
 }
 /* The right part of the background: */
 .clock .bg.right {
-	left: 100px;
+	left: 80px;
 }
 .hours .bg.right {
 	background: url(../img/hours.png) no-repeat right top;
@@ -77,7 +82,7 @@ border-radius: 120px;*/
 	background: url(../img/seconds.png) no-repeat right top;
 }
 .clock .front.left {
-	left: 0;
+
 	z-index: 10;
 }
 .minutes {  /*actually seconds*/
@@ -88,18 +93,19 @@ border-radius: 120px;*/
 	border-radius : 120px;
 	float: right;
 	margin: auto;
-	z-index: -100;
-	margin-top: -190px;
-	margin-right: 100px;
+	z-index: 1;
+	margin-top: -180px;
+	margin-right: 110px;
 }
 
 .hours {
 	border-radius : 120px;
 	margin-left:210px;
 	margin-top:10px;
-	width: 180px;
-	height: 180px;
-	position:auto;
+	width: 160px;
+	height: 160px;
+	z-index: 2;
+
 }
 .hours .display { /*hides clock number counter*/
 	display: none;
@@ -107,12 +113,9 @@ border-radius: 120px;*/
 
 .hours .front {
 	background-color:#ecff4f; /*masks only hours background*/
+	left: -20px;
 }
 
-#container {
-	width: 800px;
-	margin: auto;
-}
 /*seconds counter*/
 #circle {
 	background-color: #1a788f;
@@ -122,8 +125,6 @@ border-radius: 120px;*/
 	-moz-border-radius: 120px;
 	border-radius: 120px;
 	margin: auto;
-	margin-left: 332px;
-	margin-top: -366px;
-	position: absolute;
+	
 	z-index: -200;
 }
