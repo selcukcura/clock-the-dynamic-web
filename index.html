@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <title>Pie Chart Clock</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="js/clock.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </head>
@@ -13,8 +13,21 @@
 <div id="fancyClock">
 </div>
 </div>
+
+<div id="time"></div>
+<br><br>
+
+<span class="pink">Hours</span>
+<span class="white">Minutes</span>
+<span class="blue">Seconds</span>
+<br><br>
+
+
 <h1>Bouncy Pie-Chart Clock</h1>
 <h2>By Selcuk Cura</h2>
+
+
+<!--bouncing seconds-->
 <script>
 $(document).ready(function () {
     function animateCircle() {
@@ -29,6 +42,31 @@ $(document).ready(function () {
     }
     animateCircle(); //loops the function set above
 });
+</script>
+
+<!--current time in text-->
+<script>
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    // add a zero in front of numbers<10
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+    t = setTimeout(function () {
+        startTime()
+    }, 500);
+}
+startTime();
 </script>
 </body>
 </html>

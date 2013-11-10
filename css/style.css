@@ -22,10 +22,9 @@ body {
 .clock .rotate {
 	/* There are two .rotate divs - one for each half of the background */
 	position: absolute;
-	width: 200px;
-	height: 200px;
+	width: 193px; /*was 200px, but left was not aligned*/
+	height: 193px; /*was 200px, but left was not aligned*/
 	top: 0;
-
 }
 .rotate.right {
 	display: none;
@@ -72,7 +71,7 @@ body {
 }
 .hours .bg.right {
 	background: url(../img/hours.png) no-repeat right top;
-	left: 120px; /*remove to make center point higher but mess up on left*/
+	/*left: 120px;  remove to make center point higher but mess up on left*/
 }
 .minutes .bg.right {
 	background: url(../img/minutes.png) no-repeat right top;
@@ -127,3 +126,35 @@ body {
 }
 
 
+/*seconds, minutes and hours key*/
+
+.pink  {
+	margin-right: 10px;
+	padding: 10px 20px;
+	background-color: #ff4d80;	
+	-webkit-border-radius: 120px;
+	-moz-border-radius: 120px;
+	border-radius: 120px;
+}
+
+.white {
+	margin-right: 10px;
+	color: #000;
+	padding: 10px 20px;
+	background-color: #fff;	
+	-webkit-border-radius: 120px;
+	-moz-border-radius: 120px;
+	border-radius: 120px;
+}
+
+.blue  {
+	padding: 10px 20px;
+	background-color: #1a788f;	
+	-webkit-border-radius: 120px;
+	-moz-border-radius: 120px;
+	border-radius: 120px;
+}
+
+#time {
+	font-size: 30px;
+}
