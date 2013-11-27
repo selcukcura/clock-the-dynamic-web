@@ -38,7 +38,7 @@ var loader = document.getElementById('loader')
 
 var hourloader = document.getElementById('hourloader')
   , hourborder = document.getElementById('hourborder')
-  , αb = 200 // starting point
+  , αb = 240 // starting point
   , π = Math.PI
   , tb = 160000; // duration (160 = 1 second x 1000)
 
