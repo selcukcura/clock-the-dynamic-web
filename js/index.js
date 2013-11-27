@@ -4,7 +4,7 @@ var loader = document.getElementById('loader')
   , border = document.getElementById('border')
   , α = 40 // starting point
   , π = Math.PI
-  , t = 9600; // duration (1 hour (160 = minute x 60))
+  , t = 9600; // duration (160 = second x 60))
 
 (function draw() {
   α++;
@@ -62,4 +62,48 @@ var hourloader = document.getElementById('hourloader')
   
   setTimeout(draw, tb); // Redraw
 })();
+
+
+
+// html time
+
+// bouncing seconds
+
+$(document).ready(function () {
+    function animateCircle() {
+        $('#circle').animate({
+            height: 240,
+            width: 240
+        }, 500) //half a second bounce out
+            .animate({
+            height: 228,
+            width: 228
+        }, 500, animateCircle); //half a second bounce in
+    }
+    animateCircle(); //loops the function set above
+});
+
+// current time in text
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    // add a zero in front of numbers<10
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+    t = setTimeout(function () {
+        startTime()
+    }, 500);
+}
+startTime();
+
 

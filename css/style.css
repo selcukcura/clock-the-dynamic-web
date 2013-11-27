@@ -1,11 +1,15 @@
 body {
-	background-color: #229cba;
+	background: #229cba;
+	text-align:center;
+	color: #FFF;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 #circle {
 	width: 250px;
 	height: 250px;
-	margin: auto;
-	margin-top: 100px;
+	margin: 20px auto;
 	border: solid 20px #1a788f;
 	-webkit-border-radius: 200px;
 	-moz-border-radius: 200px;
@@ -32,4 +36,49 @@ svg {
 }
 #hourborder {
 	fill: transparent;
+}
+
+
+/*key*/
+
+
+
+/*seconds, minutes and hours key*/
+
+.key {
+	margin: 50px 0;
+}
+
+#time {
+	margin-top: 50px;
+}
+.pink  {
+	margin-right: 10px;
+	padding: 10px 20px;
+	background-color: #ff4d80;	
+	-webkit-border-radius: 120px;
+	-moz-border-radius: 120px;
+	border-radius: 120px;
+}
+
+.white {
+	margin-right: 10px;
+	color: #000;
+	padding: 10px 20px;
+	background-color: #fff;	
+	-webkit-border-radius: 120px;
+	-moz-border-radius: 120px;
+	border-radius: 120px;
+}
+
+.blue  {
+	padding: 10px 20px;
+	background-color: #1a788f;	
+	-webkit-border-radius: 120px;
+	-moz-border-radius: 120px;
+	border-radius: 120px;
+}
+
+#time {
+	font-size: 30px;
 }

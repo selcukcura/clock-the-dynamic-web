@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 <head>
 <meta charset="UTF-8">
 <title>Pie Chart Clock</title>
@@ -8,7 +7,6 @@
 
 <body>
 <div id="circle"> <svg width="300" height="300" viewbox="">
-  <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur=".5s" repeatCount="" />
   <circle cx="125" cy="125" r="106" fill="#ecff4f"/>
   <path id="border" transform="translate(125, 125)"/>
   <path id="loader" transform="translate(125, 125) scale(.85)"/>
@@ -16,6 +14,19 @@
   <path id="hourborder" transform="translate(125, 125)"/>
   <path id="hourloader" transform="translate(125, 125) scale(.85)"/>
   </svg> </div>
+
+<div class="key">
+    <span class="pink">Hours</span>
+	<span class="white">Minutes</span>
+	<span class="blue">Seconds</span>
+</div>
+
+<h1>Pie-Chart Clock</h1>
+<h2>By Selcuk Cura</h2>
+
+
+
+
 <script src="js/index.js"></script>
 </body>
 </html>
