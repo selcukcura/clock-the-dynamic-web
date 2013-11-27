@@ -16,6 +16,11 @@ body {
 	border-radius: 200px;
 	background-color: #229cba;
 }
+
+#border{
+
+}
+
 svg {
 	display: block;
 	margin: auto;

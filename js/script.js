@@ -72,12 +72,18 @@ var hourloader = document.getElementById('hourloader')
 $(document).ready(function () {
     function animateCircle() {
         $('#circle').animate({
-            height: 240,
-            width: 240
+            borderTopWidth: 35,
+            borderRightWidth: 35,
+            borderBottomWidth: 35,
+            borderLeftWidth: 35,
         }, 500) //half a second bounce out
             .animate({
-            height: 228,
-            width: 228
+
+			
+			borderTopWidth: 25,
+            borderRightWidth: 25,
+            borderBottomWidth: 25,
+            borderLeftWidth: 25,
         }, 500, animateCircle); //half a second bounce in
     }
     animateCircle(); //loops the function set above
