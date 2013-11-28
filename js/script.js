@@ -1,4 +1,30 @@
-//seconds 
+// seconds (bounce)
+
+$(document).ready(function () {
+    function animateCircle() {
+        $('#circle').animate({
+            borderTopWidth: 15,
+            borderRightWidth: 15,
+            borderBottomWidth: 15,
+            borderLeftWidth: 15,
+			marginTop: 60 // must be less than marginTop in section below to stay in position
+
+        }, 500) //half a second bounce out all 3 totals 1 sec
+    
+            .animate({
+			borderTopWidth: 30,
+            borderRightWidth: 30,
+            borderBottomWidth: 30,
+            borderLeftWidth: 30,
+			marginTop: 40
+
+        }, 500, animateCircle); 
+    }
+    animateCircle(); //loops the function set above
+});
+
+
+//minutes 
 
 var loader = document.getElementById('loader')
   , border = document.getElementById('border')
@@ -28,12 +54,7 @@ var loader = document.getElementById('loader')
 })();
 
 
-
-
-
-
 // hours
-
 // renamed 'α' to 'αb' otherwise starting points stay the same and apply to both
 
 var hourloader = document.getElementById('hourloader')
@@ -62,54 +83,3 @@ var hourloader = document.getElementById('hourloader')
   
   setTimeout(draw, tb); // Redraw
 })();
-
-
-
-// html time
-
-// bouncing seconds
-
-$(document).ready(function () {
-    function animateCircle() {
-        $('#circle').animate({
-            borderTopWidth: 35,
-            borderRightWidth: 35,
-            borderBottomWidth: 35,
-            borderLeftWidth: 35,
-        }, 500) //half a second bounce out
-            .animate({
-
-			
-			borderTopWidth: 25,
-            borderRightWidth: 25,
-            borderBottomWidth: 25,
-            borderLeftWidth: 25,
-        }, 500, animateCircle); //half a second bounce in
-    }
-    animateCircle(); //loops the function set above
-});
-
-// current time in text
-function checkTime(i) {
-    if (i < 10) {
-        i = "0" + i;
-    }
-    return i;
-}
-
-function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    // add a zero in front of numbers<10
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-    t = setTimeout(function () {
-        startTime()
-    }, 500);
-}
-startTime();
-
-
