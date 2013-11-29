@@ -7,9 +7,9 @@ $(document).ready(function () {
             borderRightWidth: 15,
             borderBottomWidth: 15,
             borderLeftWidth: 15,
-			marginTop: 60 // must be less than marginTop in section below to stay in position
+			marginTop: 60 // must be more than marginTop in section below to stay in position
 
-        }, 500) //half a second bounce out all 3 totals 1 sec
+        }, 500) //half a second bounce out 
     
             .animate({
 			borderTopWidth: 30,
@@ -20,7 +20,7 @@ $(document).ready(function () {
 
         }, 500, animateCircle); 
     }
-    animateCircle(); //loops the function set above
+    animateCircle(); //loops the function set above to tick every second
 });
 
 
@@ -28,9 +28,9 @@ $(document).ready(function () {
 
 var loader = document.getElementById('loader')
   , border = document.getElementById('border')
-  , α = 40 // starting point
+  , α = 40 // starting point for demo
   , π = Math.PI
-  , t = 9600; // duration (160 = second x 60))
+  , t = 9600; //  duration (160 = second x 60) ticks every 10 secs)
 
 (function draw() {
   α++;
@@ -59,9 +59,9 @@ var loader = document.getElementById('loader')
 
 var hourloader = document.getElementById('hourloader')
   , hourborder = document.getElementById('hourborder')
-  , αb = 240 // starting point
+  , αb = 240 // starting point for demo
   , π = Math.PI
-  , tb = 160000; // duration (160 = 1 second x 1000)
+  , tb = 576000; // duration (160 = second x 60 x 9600 ) ticks every hour)
 
 (function draw() {
   αb++;

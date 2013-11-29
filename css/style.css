@@ -36,10 +36,7 @@ svg {
 }
 /*seconds*/
 #loader {
-	fill: #ff4d80;
-}
-#background {
-	fill: #000;
+	fill: #ecff4f; /*yellow to blend with background*/
 }
 #border {
 	fill: #fff;
