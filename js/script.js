@@ -1,5 +1,6 @@
 // seconds (bounce)
 
+
 $(document).ready(function () {
     function animateCircle() {
         $('#circle').animate({
@@ -33,8 +34,8 @@ var loader = document.getElementById('loader')
   , t = 9600; //  duration (160 = second x 60) ticks every 10 secs)
 
 (function draw() {
-  α++;
-  α %= 360; //draws degrees
+ var date = new Date();
+  α = date.getMinutes() * 6;
   var r = ( α * π / 180 )
     , x = Math.sin( r ) * 125
     , y = Math.cos( r ) * - 125
@@ -64,8 +65,12 @@ var hourloader = document.getElementById('hourloader')
   , tb = 576000; // duration (160 = second x 60 x 9600 ) ticks every hour)
 
 (function draw() {
-  αb++;
-  αb %= 360; //draws degrees
+ var date = new Date();
+  // 24-hr version - hours from 0 - 23 (24 hrs)
+  // αb = date.getHours()/23 * 360;
+  
+  // 12 hr version - hours from 0 - 11 (12 hrs)
+  αb = (date.getHours() % 12)/11 * 360;
   var r = ( αb * π / 180 )
     , x = Math.sin( r ) * 125
     , y = Math.cos( r ) * - 125
